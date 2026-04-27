@@ -160,10 +160,16 @@ const App = () => {
         {/* <div ref={vd} className="h-24 w-24 bg-amber-800"></div> */}
         <div className="grid grid-cols-6 grid-rows-3 gap-3 max-md:grid-cols-4">
           <img ref={(el) => (imgs.current[0] = el)} src="https://i.pinimg.com/webp85/1200x/85/a6/99/85a69912405712de7ecd3762c2d860ac.webp" alt="" className="col-start-1 h-full w-full" />
+
           <img ref={(el) => (imgs.current[1] = el)} src="https://i.pinimg.com/1200x/af/d6/b3/afd6b322606601bf743d27a1e75b9b12.jpg" alt="" className="col-start-4 h-full w-full min-md:col-start-5" />
-          <div className="col-start-6 col-end-6 row-span-3 text-4xl font-bold text-wrap max-md:hidden">
-            <span className="font-extrabold">"</span>Fair hoti zindagi to sab successful hote. Aur woh <span className="text-red-600">BORING</span> hotta. <span className="font-extrabold">"</span> <span>Cheers to dukh dard peeda — but hasne mein hi maza hai.</span>
+
+          <div className="col-start-6 col-end-6 row-span-3 max-md:hidden">
+            <div className="sticky top-0 flex h-screen flex-col justify-center p-4 text-4xl font-bold text-wrap">
+              "Fair hoti zindagi to sab successful hote. Aur woh <span className="text-red-600">BORING</span> hotta."
+              <span className="mt-4">Cheers to dukh dard peeda — but hasne mein hi maza hai.</span>
+            </div>
           </div>
+
           <div className="z-10 col-span-4 col-start-2 row-start-2 overflow-x-clip text-6xl font-bold">
             <h1 className="text-black">The Life is so Unfair</h1>
             <h1 id="isn" className="text-red-600">
